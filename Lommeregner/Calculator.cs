@@ -39,6 +39,11 @@ public class Calculator1
             return Accumulator;
 
         }
+
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
         
 
         public double Divide(double a, double b)
