@@ -1,8 +1,6 @@
 using Lommeregner;
 using NUnit.Framework;
 
-
-
 namespace Calculator.Test.Unit
 {
     
