@@ -87,5 +87,22 @@ namespace Calculator.Test.Unit
             var result = uut.Add(n, d);
             Assert.That(q,Is.EqualTo(result));
         }
+
+        [TestCase(10, 2, 5)]
+        [TestCase(0, 3, 0)]
+        [TestCase(11.11, 11.11, 1)]
+        public void Divide_Test3cases_ResultIsCorrect(double n, double d, double q)
+        {
+            var result = uut.Divide(n, d);
+            Assert.That(q, Is.EqualTo(result));
+        }
+
+
+        [Test]
+        public void Divide_Zero_ExceptionIsThrown()
+        {
+            //Act and Assert
+            Assert.That( () => uut.Divide(10, 0), Throws.TypeOf<DivideByZeroException>());
+        }
     }
 }
