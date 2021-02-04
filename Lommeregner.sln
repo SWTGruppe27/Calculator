@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lommeregner", "Lommeregner\Lommeregner.csproj", "{B4037006-BF32-4712-B951-0DD0EFDE059F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Test.Unit", "Calculator.Test.Unit\Calculator.Test.Unit.csproj", "{9B8EB759-B13A-46CA-9765-71F18EE202F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4037006-BF32-4712-B951-0DD0EFDE059F} = {B4037006-BF32-4712-B951-0DD0EFDE059F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4037006-BF32-4712-B951-0DD0EFDE059F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4037006-BF32-4712-B951-0DD0EFDE059F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4037006-BF32-4712-B951-0DD0EFDE059F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4037006-BF32-4712-B951-0DD0EFDE059F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8EB759-B13A-46CA-9765-71F18EE202F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8EB759-B13A-46CA-9765-71F18EE202F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8EB759-B13A-46CA-9765-71F18EE202F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8EB759-B13A-46CA-9765-71F18EE202F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0897E58D-4C61-4F5A-A6F5-458D25F97A0D}
+	EndGlobalSection
+EndGlobal
