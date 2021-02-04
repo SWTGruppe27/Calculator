@@ -82,7 +82,7 @@ namespace Calculator.Test.Unit
         [TestCase(1,2,3)]
         [TestCase(3, 3, 6)]
         [TestCase(11.11, 11.11, 22.22)]
-        public void AddTest3cases(double n, double d, double q)
+        public void Add_Test3cases_SumIsCorrect(double n, double d, double q)
         {
             var result = uut.Add(n, d);
             Assert.That(q,Is.EqualTo(result));
