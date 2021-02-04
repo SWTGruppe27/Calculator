@@ -84,10 +84,78 @@ namespace Calculator.Test.Unit
         [TestCase(1,2,3)]
         [TestCase(3, 3, 6)]
         [TestCase(11.11, 11.11, 22.22)]
-        public void AddTest3cases(double n, double d, double q)
+        public void Add_Test3cases_SumIsCorrect(double n, double d, double q)
         {
             var result = uut.Add(n, d);
             Assert.That(q,Is.EqualTo(result));
+        }
+
+        [TestCase(10, 2, 5)]
+        [TestCase(0, 3, 0)]
+        [TestCase(11.11, 11.11, 1)]
+        public void Divide_Test3cases_ResultIsCorrect(double n, double d, double q)
+        {
+            var result = uut.Divide(n, d);
+            Assert.That(q, Is.EqualTo(result));
+        }
+
+
+        [Test]
+        public void Divide_Zero_ExceptionIsThrown()
+        {
+            //Act and Assert
+            Assert.That( () => uut.Divide(10, 0), Throws.TypeOf<DivideByZeroException>());
+        }
+
+        [Test]
+        public void Clear_AddAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Add(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_SubtractAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Subtract(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_MultiplyAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Multiply(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_PowerAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Power(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_DivideAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Divide(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
         }
 
         //forsøg med funktions pointer
