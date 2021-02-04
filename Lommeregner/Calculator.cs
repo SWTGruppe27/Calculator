@@ -44,7 +44,7 @@ public class Calculator1
         public double Divide(double a, double b)
         {
             if(b==0) throw new DivideByZeroException();
-            return a / b;
+            return Accumulator=a / b;
         }
     }
 }
