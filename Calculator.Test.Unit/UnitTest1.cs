@@ -1,3 +1,5 @@
+using System;
+using System.ComponentModel;
 using Lommeregner;
 using NUnit.Framework;
 
@@ -86,6 +88,18 @@ namespace Calculator.Test.Unit
         {
             var result = uut.Add(n, d);
             Assert.That(q,Is.EqualTo(result));
+        }
+
+        //forsøg med funktions pointer
+        //private Func<double, double, double> pr = null;
+
+        [TestCase(3, 4, 14)]
+        [TestCase(3, 3, 12)]
+        [TestCase(11.11, 11.11, 44.44)]
+        public void Add_Accumulator_sumIsCorrect(double a, double b, double result)
+        {
+            uut.Add(a, b);
+            Assert.That(uut.Accumulator + uut.Add(a, b),Is.EqualTo(result)); 
         }
     }
 }
