@@ -104,5 +104,56 @@ namespace Calculator.Test.Unit
             //Act and Assert
             Assert.That( () => uut.Divide(10, 0), Throws.TypeOf<DivideByZeroException>());
         }
+
+        [Test]
+        public void Clear_AddAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Add(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_SubtractAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Subtract(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_MultiplyAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Multiply(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_PowerAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Power(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
+        [Test]
+        public void Clear_DivideAccumulator_AccumulatorZero()
+        {
+            //Act
+            uut.Divide(2, 3);
+            uut.Clear();
+            double temp = uut.Accumulator;
+            //Assert
+            Assert.That(temp, Is.EqualTo(0));
+        }
     }
 }
