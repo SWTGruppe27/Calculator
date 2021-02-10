@@ -42,7 +42,7 @@ namespace Calculator
 
         public double Subtract(double subtractor)
         {
-            double result = Accumulator + subtractor;
+            double result = Accumulator - subtractor;
 
             Accumulator = result;
 
@@ -58,7 +58,7 @@ namespace Calculator
 
         public double Multiply(double multiplier)
         {
-            double result = Accumulator + multiplier;
+            double result = Accumulator * multiplier;
 
             Accumulator = result;
 

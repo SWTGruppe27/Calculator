@@ -184,8 +184,27 @@ namespace Calculator.Test.Unit
         {
             uut.Add(a);
             Assert.That(uut.Add(a),Is.EqualTo(result));
-            
         }
+
+        [TestCase(2, -4)]
+        [TestCase(5, -10)]
+        [TestCase(0, 0)]
+        public void Subtract_overloadedFunction_SumIsCorrect(double a, double result)
+        {
+            uut.Subtract(a);
+            Assert.That(uut.Subtract(a), Is.EqualTo(result));
+        }
+
+        [TestCase(2, 0)]
+        [TestCase(5, 0)]
+        [TestCase(0, 0)]
+        public void Multiply_overloadedFunction_SumIsCorrect(double a, double result)
+        {
+            uut.Multiply(a);
+            Assert.That(uut.Multiply(a), Is.EqualTo(result));
+        }
+
+
 
     }
 }
