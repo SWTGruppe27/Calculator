@@ -187,5 +187,13 @@ namespace Calculator.Test.Unit
             
         }
 
+        //[TestCase(2.2, 1)]
+        //[TestCase(5, 10)]
+        //[TestCase(10, 3)]
+        //public void Divide_overloadedFunction_SumIsCorrect(double a, double result)
+        //{
+        //    Assert.That(uut.Divide(a), Is.EqualTo(result));
+        //}
+
     }
 }

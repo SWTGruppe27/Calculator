@@ -92,5 +92,16 @@ namespace Calculator
 
             return result;
         }
+
+        public double Divide(double a)
+        {
+            if (a == 0 || Accumulator == 0) throw new DivideByZeroException();
+
+            double result = a / Accumulator;
+
+            Accumulator = result;
+
+            return result;
+        }
     }
 }
