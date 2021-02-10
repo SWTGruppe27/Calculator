@@ -50,7 +50,7 @@ namespace Calculator.Test.Unit
             Assert.That(result, Is.EqualTo(3*3.14));
         }
         [Test]
-        public void Add_Intigers_SumIsCorrect()
+        public void Add_Integers_SumIsCorrect()
         {
             //Act
             var result = uut.Add(13, 1);
@@ -98,7 +98,6 @@ namespace Calculator.Test.Unit
             var result = uut.Divide(n, d);
             Assert.That(q, Is.EqualTo(result));
         }
-
 
         [Test]
         public void Divide_Zero_ExceptionIsThrown()
