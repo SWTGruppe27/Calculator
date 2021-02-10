@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lommeregner", "Lommeregner\Lommeregner.csproj", "{B4037006-BF32-4712-B951-0DD0EFDE059F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Lommeregner\Calculator.csproj", "{B4037006-BF32-4712-B951-0DD0EFDE059F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Test.Unit", "Calculator.Test.Unit\Calculator.Test.Unit.csproj", "{9B8EB759-B13A-46CA-9765-71F18EE202F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Test.Unit", "Calculator.Test.Unit\Calculator.Test.Unit.csproj", "{9B8EB759-B13A-46CA-9765-71F18EE202F3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B4037006-BF32-4712-B951-0DD0EFDE059F} = {B4037006-BF32-4712-B951-0DD0EFDE059F}
 	EndProjectSection

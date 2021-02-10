@@ -1,6 +1,6 @@
 using System;
 using System.ComponentModel;
-using Lommeregner;
+using Calculator;
 using NUnit.Framework;
 
 namespace Calculator.Test.Unit

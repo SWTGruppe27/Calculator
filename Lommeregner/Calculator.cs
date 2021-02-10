@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lommeregner
+namespace Calculator
 {
     public class DivideByZeroException : Exception
     {
-        public  DivideByZeroException() 
+        public DivideByZeroException()
         {
-            
+
         }
-}
-public class Calculator1
+    }
+
+    public class Calculator1
     {
         public double Accumulator { get; private set; }
 
         public double Add(double a, double b)
         {
             Accumulator = a + b;
-            
+
             return Accumulator;
         }
 
@@ -75,12 +76,12 @@ public class Calculator1
         {
             Accumulator = 0;
         }
-        
+
 
         public double Divide(double a, double b)
         {
-            if(b==0) throw new DivideByZeroException();
-            return Accumulator=a / b;
+            if (b == 0) throw new DivideByZeroException();
+            return Accumulator = a / b;
         }
 
         public double Power(double exponent)

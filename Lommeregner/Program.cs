@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lommeregner
+namespace Calculator
 {
     class Program
     {
