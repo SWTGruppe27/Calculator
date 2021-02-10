@@ -8,12 +8,12 @@ namespace Calculator.Test.Unit
     
     public class Tests
     {
-        private Calculator1 uut;
+        private Calculator uut;
         [SetUp]
         
         public void Setup()
         {
-            uut = new Calculator1();
+            uut = new Calculator();
         }
 
         [Test]
@@ -147,6 +147,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(temp, Is.EqualTo(0));
         }
+
         [Test]
         public void Clear_DivideAccumulator_AccumulatorZero()
         {
@@ -158,8 +159,6 @@ namespace Calculator.Test.Unit
             Assert.That(temp, Is.EqualTo(0));
         }
 
-        //forsøg med funktions pointer
-        //private Func<double, double, double> pr = null;
 
         [TestCase(3, 4, 14)]
         [TestCase(3, 3, 12)]
@@ -178,5 +177,16 @@ namespace Calculator.Test.Unit
             uut.Multiply(a, b);
             Assert.That(uut.Accumulator + uut.Multiply(a,b),Is.EqualTo(result));
         }
+
+        [TestCase(2, 4)]
+        [TestCase(5, 10)]
+        [TestCase(0, 0)]
+        public void Add_overloadedFunction_SumIsCorrect(double a, double result)
+        {
+            uut.Add(a);
+            Assert.That(uut.Add(a),Is.EqualTo(result));
+            
+        }
+
     }
 }

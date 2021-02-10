@@ -12,7 +12,7 @@ namespace Calculator
         }
     }
 
-    public class Calculator1
+    public class Calculator
     {
         public double Accumulator { get; private set; }
 
