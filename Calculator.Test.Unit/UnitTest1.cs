@@ -169,5 +169,14 @@ namespace Calculator.Test.Unit
             uut.Add(a, b);
             Assert.That(uut.Accumulator + uut.Add(a, b),Is.EqualTo(result)); 
         }
+
+        [TestCase(2, 3, 12)]
+        [TestCase(5, 5, 50)]
+        [TestCase(0, 4, 0)]
+        public void Multiply_Accumulator_SumIsCorrect(double a, double b, double result)
+        {
+            uut.Multiply(a, b);
+            Assert.That(uut.Accumulator + uut.Multiply(a,b),Is.EqualTo(result));
+        }
     }
 }
