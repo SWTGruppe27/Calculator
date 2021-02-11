@@ -268,5 +268,14 @@ namespace Calculator.Test.Unit
             var result = uut.Power(a, b);
             Assert.That(c, Is.InRange(result - 0.1, result + 0.1));
         }
+
+        [TestCase(5, 100000)]
+        [TestCase(2, 16)]
+        [TestCase(0, 1)]
+        public void Power_overloadedFunction_SumIsCorrect(double a, double result)
+        {
+            uut.Add(a, a);
+            Assert.That(uut.Power(a), Is.EqualTo(result));
+        }
     }
 }
