@@ -82,8 +82,8 @@ namespace Calculator
                             Console.WriteLine($"{temp} x {no3} = {Result}");
                             break;
                         case "d":
-                            //Result = calculator.Divide(no3);
-                            //Console.WriteLine($"{calculator.Accumulator} / {no3} = {Result}");
+                            Result = calculator.Divide(no3);
+                            Console.WriteLine($"{calculator.Accumulator} / {no3} = {Result}");
                             break;
                         case "p":
                             Result = calculator.Power(no3);

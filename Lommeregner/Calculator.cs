@@ -32,7 +32,6 @@ namespace Calculator
             return result;
         }
 
-
         public double Subtract(double a, double b)
         {
             Accumulator = a - b;
@@ -65,13 +64,6 @@ namespace Calculator
             return result;
         }
 
-        public double Power(double x, double exp)
-        {
-            Accumulator = Math.Pow(x, exp);
-            return Accumulator;
-
-        }
-
         public void Clear()
         {
             Accumulator = 0;
@@ -84,6 +76,17 @@ namespace Calculator
             return Accumulator = a / b;
         }
 
+        public double Divide(double a)
+        {
+            if (a == 0 || Accumulator == 0) throw new DivideByZeroException();
+
+            double result = Accumulator / a;
+
+            Accumulator = result;
+
+            return result;
+        }
+
         public double Power(double exponent)
         {
             double result = Math.Pow(Accumulator, exponent);
@@ -92,16 +95,10 @@ namespace Calculator
 
             return result;
         }
-
-        public double Divide(double a)
+        public double Power(double x, double exp)
         {
-            if (a == 0 || Accumulator == 0) throw new DivideByZeroException();
-
-            double result = a / Accumulator;
-
-            Accumulator = result;
-
-            return result;
+            Accumulator = Math.Pow(x, exp);
+            return Accumulator;
         }
     }
 }

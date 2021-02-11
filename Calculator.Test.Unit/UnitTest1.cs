@@ -25,6 +25,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(9));
         }
+
         [Test]
         public void Multiply_0Times3_ProductIsCorrect()
         {
@@ -33,6 +34,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(0));
         }
+
         [Test]
         public void Multiply_3Times0_ProductIsCorrect()
         {
@@ -41,6 +43,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(0));
         }
+
         [Test]
         public void Multiply_decimals_ProductIsCorrect()
         {
@@ -49,6 +52,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(3*3.14));
         }
+
         [Test]
         public void Add_Integers_SumIsCorrect()
         {
@@ -57,6 +61,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(14));
         }
+
         [Test]
         public void Add_Zero_SumIsCorrect()
         {
@@ -65,6 +70,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(0));
         }
+
         [Test]
         public void Add_ZeroAnd10_SumIsCorrect()
         {
@@ -73,6 +79,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(10));
         }
+
         [Test]
         public void Add_Decimal_SumIsCorrect()
         {
@@ -81,6 +88,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(21.45));
         }
+
         [TestCase(1,2,3)]
         [TestCase(3, 3, 6)]
         [TestCase(11.11, 11.11, 22.22)]
@@ -116,6 +124,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(temp, Is.EqualTo(0));
         }
+
         [Test]
         public void Clear_SubtractAccumulator_AccumulatorZero()
         {
@@ -126,6 +135,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(temp, Is.EqualTo(0));
         }
+
         [Test]
         public void Clear_MultiplyAccumulator_AccumulatorZero()
         {
@@ -136,6 +146,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(temp, Is.EqualTo(0));
         }
+
         [Test]
         public void Clear_PowerAccumulator_AccumulatorZero()
         {
@@ -157,7 +168,6 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(temp, Is.EqualTo(0));
         }
-
 
         [TestCase(3, 4, 14)]
         [TestCase(3, 3, 12)]
@@ -204,15 +214,13 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Multiply(a), Is.EqualTo(result));
         }
 
-
-
-        //[TestCase(2.2, 1)]
-        //[TestCase(5, 10)]
-        //[TestCase(10, 3)]
-        //public void Divide_overloadedFunction_SumIsCorrect(double a, double result)
-        //{
-        //    Assert.That(uut.Divide(a), Is.EqualTo(result));
-        //}
-
+        [TestCase(2, 1)]
+        [TestCase(5, 0.4)]
+        [TestCase(-10, -0.2)]
+        public void Divide_overloadedFunction_SumIsCorrect(double b, double result)
+        {
+            uut.Divide(4 , 2);
+            Assert.That(uut.Divide(b), Is.EqualTo(result));
+        }
     }
 }
