@@ -132,6 +132,13 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
+        public void Divide_ZeroOverloaded_ExceptionIsThrown()
+        {
+            //Act and Assert
+            Assert.That(() => uut.Divide(10), Throws.TypeOf<DivideByZeroException>());
+        }
+
+        [Test]
         public void Clear_AddAccumulator_AccumulatorZero()
         {
             //Act
