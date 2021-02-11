@@ -98,6 +98,23 @@ namespace Calculator.Test.Unit
             Assert.That(q,Is.EqualTo(result));
         }
 
+        [TestCase(4, 2, 2)]
+        [TestCase(-4,-3,-1)]
+        [TestCase(-2,5,-7)]
+        public void Subtract_Test3Cases_SumIsCorrect(double a, double b, double result)
+        {
+            Assert.That(uut.Subtract(a,b) ,Is.EqualTo(result));
+        }
+
+        [TestCase(2, 0)]
+        [TestCase(-3, 5)]
+        [TestCase(5, -3)]
+        public void Subtract_Overloaded_SumIsCorrect(double b, double result)
+        {
+            uut.Subtract(4, 2);
+            Assert.That(uut.Subtract(b), Is.EqualTo(result));
+        }
+
         [TestCase(10, 2, 5)]
         [TestCase(0, 3, 0)]
         [TestCase(11.11, 11.11, 1)]
