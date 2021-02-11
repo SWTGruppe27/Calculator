@@ -49,6 +49,16 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(3*3.14));
         }
+
+        [TestCase(4, 2, 16)]
+        [TestCase(5, 7, 78125)]
+        [TestCase(2.2, 3, 10.648)]
+        public void Power_Test3casesOfPower_SumIsCorrect(double a, double b, double c)
+        {
+            var result = uut.Power(a, b);
+            Assert.That(c, Is.InRange(result-0.1,result+0.1));
+        }
+
         [Test]
         public void Add_Integers_SumIsCorrect()
         {
@@ -81,6 +91,7 @@ namespace Calculator.Test.Unit
             //Assert
             Assert.That(result, Is.EqualTo(21.45));
         }
+
         [TestCase(1,2,3)]
         [TestCase(3, 3, 6)]
         [TestCase(11.11, 11.11, 22.22)]
@@ -202,6 +213,15 @@ namespace Calculator.Test.Unit
         {
             uut.Multiply(a);
             Assert.That(uut.Multiply(a), Is.EqualTo(result));
+        }
+
+        [TestCase(5, 100000)]
+        [TestCase(2, 16)]
+        [TestCase(0, 1)]
+        public void Power_overloadedFunction_SumIsCorrect(double a, double result)
+        {
+            uut.Add(a,a);
+            Assert.That(uut.Power(a), Is.EqualTo(result));
         }
 
 
